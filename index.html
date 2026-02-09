@@ -148,10 +148,41 @@
                     </div>
                 </div>
 
-                <!-- Decorative Elements -->
-                <div class="hidden lg:block relative">
-                    <div class="absolute -top-20 -right-20 w-72 h-72 bg-amber-500/20 rounded-full blur-3xl"></div>
-                    <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+                <!-- Hero Image -->
+                <div class="hidden lg:block relative" x-data="{ show: false }" x-init="setTimeout(() => show = true, 400)">
+                    <div x-show="show" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="relative">
+                        <!-- Decorative blur behind -->
+                        <div class="absolute -top-10 -right-10 w-80 h-80 bg-amber-500/30 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-10 -left-10 w-80 h-80 bg-blue-500/30 rounded-full blur-3xl"></div>
+                        
+                        <!-- Main Image Container -->
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
+                            <img src="assets/images/hero-accountant-right.jpg" alt="Professional Accountant" class="w-full h-[500px] object-cover">
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-transparent to-transparent"></div>
+                        </div>
+                        
+                        <!-- Floating Card -->
+                        <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-4 max-w-[200px]">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-gray-900">Tersertifikasi</p>
+                                    <p class="text-xs text-gray-500">IAI & BPKP</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Experience Badge -->
+                        <div class="absolute -top-4 -right-4 bg-amber-500 text-white rounded-xl shadow-xl p-4">
+                            <p class="text-3xl font-bold">15+</p>
+                            <p class="text-xs">Tahun</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
